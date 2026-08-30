@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminLogin from "./admin/AdminLogin";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import ScrollToTop from "./components/ScrollToTop";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
 import Shop from "./Pages/Shop";
@@ -40,7 +40,7 @@ return (
   element={<AdminLogin />}
 />
 
-
+ <ScrollToTop />
 <Route
 
 path="/contact"
