@@ -21,39 +21,20 @@ const ProductCard = ({ product }) => {
     (state) => state.addToCart
   );
 
-  // ==========================================
-  // ID UNIQUE DU PRODUIT
-  // ==========================================
-
   const productId = String(
     product._id || product.id
   );
-
-  // ==========================================
-  // FAVORIS
-  // ==========================================
 
   const liked = favorites.some(
     (item) =>
       String(item._id || item.id) === productId
   );
 
-  // ==========================================
-  // AJOUTER AU PANIER
-  // ==========================================
-
   const handleAddCart = () => {
     const cartProduct = {
       ...product,
-
-      // IMPORTANT :
-      // on utilise TOUJOURS id dans le panier
       id: productId,
-
-      // On garde aussi _id si le produit vient de MongoDB
       _id: product._id || productId,
-
-      // Toujours commencer à 1
       quantity: 1,
     };
 
@@ -84,17 +65,18 @@ const ProductCard = ({ product }) => {
         duration-500
       "
     >
-      {/* ==========================================
-          IMAGE
-      ========================================== */}
+
+      {/* IMAGE */}
 
       <div
         className="
           relative
           overflow-hidden
-          h-[380px]
+          h-[330px]
+          sm:h-[380px]
         "
       >
+
         <img
           src={product.image}
           alt={product.name}
@@ -108,38 +90,41 @@ const ProductCard = ({ product }) => {
           "
         />
 
-        {/* ==========================================
-            DISCOUNT
-        ========================================== */}
+        {/* DISCOUNT */}
 
         {product.discount && (
           <span
             className="
               absolute
-              top-4
-              left-4
+              top-3
+              left-3
+              sm:top-4
+              sm:left-4
               bg-black
               text-white
-              text-xs
-              px-3
-              py-2
+              text-[10px]
+              sm:text-xs
+              px-2.5
+              py-1.5
+              sm:px-3
+              sm:py-2
             "
           >
             -{product.discount}%
           </span>
         )}
 
-        {/* ==========================================
-            FAVORIS
-        ========================================== */}
+        {/* FAVORIS */}
 
         <button
           type="button"
           onClick={() => toggleFavorite(product)}
           className="
             absolute
-            top-4
-            right-4
+            top-3
+            right-3
+            sm:top-4
+            sm:right-4
             bg-white
             w-10
             h-10
@@ -150,9 +135,12 @@ const ProductCard = ({ product }) => {
             shadow
             hover:scale-105
             transition
+            z-10
           "
+          aria-label="Ajouter aux favoris"
         >
           <FiHeart
+            size={18}
             className={
               liked
                 ? "text-red-500 fill-red-500"
@@ -161,42 +149,46 @@ const ProductCard = ({ product }) => {
           />
         </button>
 
-        {/* ==========================================
-            ACTIONS
-        ========================================== */}
+        {/* ACTIONS */}
 
         <div
           className="
             absolute
-            bottom-5
+            bottom-4
             left-0
             right-0
             flex
             justify-center
             gap-3
-            opacity-0
-            group-hover:opacity-100
+            opacity-100
+            md:opacity-0
+            md:group-hover:opacity-100
             transition
+            duration-300
           "
         >
-          {/* VOIR */}
+
+          {/* VOIR DETAILS */}
 
           <Link
             to={`/product/${productId}`}
             className="
               bg-white
+              text-black
               w-12
               h-12
               rounded-full
               flex
               items-center
               justify-center
+              shadow-lg
               hover:bg-gray-100
               transition
             "
             title="Voir le produit"
+            aria-label="Voir le produit"
           >
-            <FiEye />
+            <FiEye size={20} />
           </Link>
 
           {/* PANIER */}
@@ -213,28 +205,32 @@ const ProductCard = ({ product }) => {
               flex
               items-center
               justify-center
+              shadow-lg
               hover:bg-yellow-500
               hover:text-black
               transition
             "
             title="Ajouter au panier"
+            aria-label="Ajouter au panier"
           >
-            <FiShoppingBag />
+            <FiShoppingBag size={20} />
           </button>
+
         </div>
+
       </div>
 
-      {/* ==========================================
-          INFORMATIONS
-      ========================================== */}
+      {/* INFORMATIONS */}
 
-      <div className="p-5">
+      <div className="p-4 sm:p-5">
 
         <p
           className="
-            text-xs
+            text-[10px]
+            sm:text-xs
             uppercase
-            tracking-widest
+            tracking-[2px]
+            sm:tracking-widest
             text-gray-400
           "
         >
@@ -243,27 +239,36 @@ const ProductCard = ({ product }) => {
 
         <h3
           className="
-            text-lg
+            text-base
+            sm:text-lg
             font-semibold
             mt-2
+            line-clamp-2
           "
         >
           {product.name}
         </h3>
 
-        {/* ==========================================
-            PRIX
-        ========================================== */}
+        {/* PRIX */}
 
         <div
           className="
             flex
-            gap-3
+            flex-wrap
+            gap-2
+            sm:gap-3
             items-center
             mt-3
           "
         >
-          <span className="font-bold">
+
+          <span
+            className="
+              font-bold
+              text-sm
+              sm:text-base
+            "
+          >
             {Number(product.price).toLocaleString()} FCFA
           </span>
 
@@ -272,7 +277,8 @@ const ProductCard = ({ product }) => {
               className="
                 text-gray-400
                 line-through
-                text-sm
+                text-xs
+                sm:text-sm
               "
             >
               {Number(
@@ -280,10 +286,59 @@ const ProductCard = ({ product }) => {
               ).toLocaleString()} FCFA
             </span>
           )}
+
         </div>
+
+        {/* BOUTONS MOBILE */}
+
+        <div className="flex gap-2 mt-4 md:hidden">
+
+          <Link
+            to={`/product/${productId}`}
+            className="
+              flex-1
+              border
+              border-black
+              text-black
+              py-3
+              text-xs
+              font-medium
+              uppercase
+              tracking-wider
+              text-center
+              active:scale-95
+              transition
+            "
+          >
+            Détails
+          </Link>
+
+          <button
+            type="button"
+            onClick={handleAddCart}
+            className="
+              flex-1
+              bg-black
+              text-white
+              py-3
+              text-xs
+              font-medium
+              uppercase
+              tracking-wider
+              active:scale-95
+              transition
+            "
+          >
+            Ajouter
+          </button>
+
+        </div>
+
       </div>
+
     </motion.div>
   );
 };
 
 export default ProductCard;
+
