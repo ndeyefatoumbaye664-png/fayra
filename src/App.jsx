@@ -4,7 +4,7 @@ import AdminLogin from "./admin/AdminLogin";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-import Contact from "./pages/Contact";
+import Contact from "./Pages/Contact";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import ProductDetails from "./pages/ProductDetails";
