@@ -5,12 +5,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Contact from "./Pages/Contact";
-import Home from "./pages/Home";
-import Shop from "./pages/Shop";
-import ProductDetails from "./pages/ProductDetails";
-import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
-import Favorites from "./pages/Favorites";
+import Home from "./Pages/Home";
+import Shop from "./Pages/Shop";
+import ProductDetails from "./Pages/ProductDetails";
+import Cart from "./Pages/Cart";
+import Checkout from "./Pages/Checkout";
+import Favorites from "./Pages/Favorites";
 
 
 import AdminLayout from "./admin/AdminLayout";
