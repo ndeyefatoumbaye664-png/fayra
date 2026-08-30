@@ -8,7 +8,7 @@ const Hero = () => {
       {/* ================= IMAGE ================= */}
 
       <img
-        src="https://images.unsplash.com/photo-1496747611176-843222e1e57c"
+        src="https://st.depositphotos.com/2209782/2544/i/450/depositphotos_25447851-stock-photo-clothes-on-a-rack.jpg"
         alt="Collection FAYRA"
         className="
           absolute

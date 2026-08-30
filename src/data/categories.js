@@ -10,7 +10,7 @@ const categories = [
     id: 2,
     name: "Ensembles",
     image:
-      "https://images.unsplash.com/photo-1591369822096-ffd140ec948f"
+      "https://pin.it/H4GPpQlac"
   },
 
   {
@@ -24,7 +24,7 @@ const categories = [
     id: 4,
     name: "Accessoires",
     image:
-      "https://images.unsplash.com/photo-1611652022419-a9419f74343d"
+      "https://pin.it/53mltOqRV"
   }
 ];
 
