@@ -6,7 +6,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-import useOrderStore from "../store/orderStore";
+import useOrderStore from "../Store/orderStore";
 
 const Orders = () => {
 

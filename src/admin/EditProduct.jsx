@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import useProductStore from "../store/productStore";
+import useProductStore from "../Store/productStore";
 
 
 const EditProduct = () => {

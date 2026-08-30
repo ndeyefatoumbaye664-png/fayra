@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import useFavoriteStore from "../store/favoriteStore";
+import useFavoriteStore from "../Store/favoriteStore";
 import {
   FiHeart,
   FiShoppingBag,
   FiEye,
 } from "react-icons/fi";
 import { motion } from "framer-motion";
-import useCartStore from "../store/cartStore";
+import useCartStore from "../Store/cartStore";
 
 const ProductCard = ({ product }) => {
   const favorites = useFavoriteStore(

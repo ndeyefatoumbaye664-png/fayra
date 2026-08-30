@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { FiHeart, FiMinus, FiPlus, FiShoppingBag } from "react-icons/fi";
 
 import useProductStore from "../Store/productStore";
-import useCartStore from "../store/cartStore";
-import useFavoriteStore from "../store/favoriteStore";
+import useCartStore from "../Store/cartStore";
+import useFavoriteStore from "../Store/favoriteStore";
 
 const ProductDetails = () => {
   const { id } = useParams();

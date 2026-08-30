@@ -15,7 +15,7 @@ import {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import useCartStore from "../store/cartStore";
+import useCartStore from "../Store/cartStore";
 
 const Checkout = () => {
   const navigate = useNavigate();

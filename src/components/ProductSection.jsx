@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import useProductStore from "../store/productStore";
+import useProductStore from "../Store/productStore";
 
 
 const ProductSection = () => {

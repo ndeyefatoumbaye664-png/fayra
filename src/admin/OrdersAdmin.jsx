@@ -9,7 +9,7 @@ import {
   FiRefreshCw,
 } from "react-icons/fi";
 
-import useOrderStore from "../store/orderStore";
+import useOrderStore from "../Store/orderStore";
 
 const OrdersAdmin = () => {
   // =========================

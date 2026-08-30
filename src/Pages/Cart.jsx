@@ -1,6 +1,6 @@
 import { FiTrash2, FiMinus, FiPlus } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import useCartStore from "../store/cartStore";
+import useCartStore from "../Store/cartStore";
 
 
 const Cart = () => {

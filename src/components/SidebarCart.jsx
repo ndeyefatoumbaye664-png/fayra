@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiX, FiTrash2, FiMinus, FiPlus } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
-import useCartStore from "../store/cartStore";
+import useCartStore from "../Store/cartStore";
 import { Link } from "react-router-dom";
 
 
