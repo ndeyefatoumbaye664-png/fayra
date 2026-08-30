@@ -16,7 +16,7 @@ import Favorites from "./Pages/Favorites";
 import AdminLayout from "./admin/AdminLayout";
 import Dashboard from "./admin/Dashboard";
 import ProductsAdmin from "./admin/ProductsAdmin";
-import AddProduct from "./admin/AddProduct";
+import AddProduct from "./admin/Addproduct";
 import EditProduct from "./admin/EditProduct";
 import OrdersAdmin from "./admin/OrdersAdmin";
 
