@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const API_URL = "http://localhost:5000/api/products";
+const API_URL = "https://fayra-api.onrender.com/api/products";
 
 const useProductStore = create((set) => ({
   products: [],
