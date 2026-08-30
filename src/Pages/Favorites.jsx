@@ -1,5 +1,5 @@
 import ProductCard from "../components/ProductCard";
-import useFavoriteStore from "../store/favoriteStore";
+import useFavoriteStore from "../Store/favoriteStore";
 
 
 const Favorites = () => {
