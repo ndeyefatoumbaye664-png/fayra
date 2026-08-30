@@ -9,7 +9,7 @@ import {
 } from "react-icons/fi";
 
 import useCartStore from "../Store/cartStore";
-import useFavoriteStore from "../store/favoriteStore";
+import useFavoriteStore from "../Store/favoriteStore";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
