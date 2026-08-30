@@ -8,7 +8,7 @@ import {
   FiHeart,
 } from "react-icons/fi";
 
-import useCartStore from "../store/cartStore";
+import useCartStore from "../Store/cartStore";
 import useFavoriteStore from "../store/favoriteStore";
 
 const Navbar = () => {
